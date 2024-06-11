@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://cv270xdjqxutn"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_ju1ok"]
+[ext_resource type="Texture2D" uid="uid://cm4nqkonqw07e" path="res://assets/sprites/Green.png" id="2_6uitr"]
+[ext_resource type="Texture2D" uid="uid://dwwn0wxutcyrd" path="res://assets/sprites/Cool Text - Magne Polos 460102146435988.png" id="3_2jn5v"]
+
+[node name="MainMenu" type="Node"]
+script = ExtResource("1_ju1ok")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 1153.0
+offset_bottom = 646.0
+texture = ExtResource("2_6uitr")
+stretch_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 125.0
+offset_top = 123.0
+offset_right = 1045.0
+offset_bottom = 231.0
+texture = ExtResource("3_2jn5v")
+
+[node name="level1" type="Button" parent="."]
+offset_left = 143.0
+offset_top = 343.0
+offset_right = 483.0
+offset_bottom = 453.0
+theme_override_font_sizes/font_size = 51
+text = "Nivel 1"
+
+[node name="level2" type="Button" parent="."]
+offset_left = 685.0
+offset_top = 345.0
+offset_right = 1025.0
+offset_bottom = 455.0
+theme_override_font_sizes/font_size = 51
+text = "Nivel 2"
+
+[connection signal="pressed" from="level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="level2" to="." method="_on_level_2_pressed"]
